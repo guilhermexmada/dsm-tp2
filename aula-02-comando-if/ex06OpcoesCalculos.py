@@ -8,15 +8,29 @@ n2 = int(input("Digite o segundo número: "))
 
 o = int(input("Escolha uma das opções: \n 1 - Média ponderada com pesos 2 e 3, respectivamente \n 2 - Quadrado da soma dos 2 números \n 3 - Cubo do menor número \n"))
 
-if o == 1:
-    print(f"Resultado = {((n1*2) + (n2*3)) / 5}")
-elif o == 2:
-    print(f"Resultado = {pow((n1 + n2), 2)}")
-elif o == 3:
-    if n1 > n2:
-        print(f"Resultado = {n2**3}")
-    else: 
-        print(f"Resultado = {n1**3}")
-else:
-    print("Opção Inválida")
+# match case = switch case
+match o: 
+    case 1:
+        print(f"Resultado = {((n1*2) + (n2*3)) / 5}")
+    case 2:
+        print(f"Resultado = {pow((n1 + n2), 2)}")
+    case 3:
+        if n1 > n2:
+          print(f"Resultado = {n2**3}")
+        else: 
+          print(f"Resultado = {n1**3}")
+    case _:
+        print("Você escolheu uma opção inválida")
+        exit()
 
+# if o == 1:
+#     print(f"Resultado = {((n1*2) + (n2*3)) / 5}")
+# elif o == 2:
+#     print(f"Resultado = {pow((n1 + n2), 2)}")
+# elif o == 3:
+#     if n1 > n2:
+#         print(f"Resultado = {n2**3}")
+#     else: 
+#         print(f"Resultado = {n1**3}")
+# else:
+#     print("Opção Inválida")
